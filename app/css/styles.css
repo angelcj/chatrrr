@@ -19,7 +19,7 @@
 }
 html {
   background-color: var(--desktop-bg-colour);
-  background-image: url("./img/bg.gif");
+  background-image: url("../img/bg.gif");
   background-repeat: repeat;
   background-size: 200px;
 }

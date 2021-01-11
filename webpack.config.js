@@ -15,6 +15,15 @@ class RunAfterCompile {
       fse.copySync("./app/img/BeOS_people.png", "./dist/img/BeOS_people.png");
       fse.copySync("./app/img/logo.png", "./dist/img/logo.png");
       fse.copySync("./app/img/bg.gif", "./dist/img/bg.gif");
+      fse.copySync("./app/img/alicia_silverstone.jpg", "./dist/img/alicia_silverstone.jpg");
+      fse.copySync("./app/img/alyson_hannigan.jpg", "./dist/img/alyson_hannigan.jpg");
+      fse.copySync("./app/img/elizabeth_berkley.jpg", "./dist/img/elizabeth_berkley.jpg");
+      fse.copySync("./app/img/jaleel_white.jpg", "./dist/img/jaleel_white.jpg");
+      fse.copySync("./app/img/jessica_biel.jpg", "./dist/img/jessica_biel.jpg");
+      fse.copySync("./app/img/leo_dicaprio.jpg", "./dist/img/leo_dicaprio.jpg");
+      fse.copySync("./app/img/paul_rudd.jpg", "./dist/img/paul_rudd.jpg");
+      fse.copySync("./app/img/tiffani_thiessen.jpg", "./dist/img/tiffani_thiessen.jpg");
+      fse.copySync("./app/img/tom_cruise.jpeg", "./dist/img/tom_cruise.jpeg");
     });
   }
 }
