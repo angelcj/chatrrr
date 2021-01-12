@@ -26,7 +26,7 @@ export default function SearchUsers() {
         <h1 className="window__title">Search new users</h1>
         <div className="window__content">
           {users.length > 0 ? (
-            <Select placeholder="Search someone cool" classNamePrefix="search-user" onChange={({ value }) => handleFollow(value)} options={options} />
+            <Select placeholder="Search someone cool" classNamePrefix="search-user" onChange={({ value }) => handleFollow(value)} options={options} value={null} />
           ) : (
             <div className="no-follows">
               You won the internet!
