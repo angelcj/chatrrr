@@ -3,7 +3,7 @@
 Chatrrr is a Twitter-like simple app with plenty of 90s charm.
 To quickly see it in action, you can visit [this link](https://ecstatic-noyce-4ef3d3.netlify.app/).
 
-## Installation
+## Installation
 
 ### Prerequisities
 
