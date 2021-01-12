@@ -15,6 +15,7 @@ import Wall from "./components/Wall";
 import PersonalWall from "./components/PersonalWall";
 import UserWall from "./components/UserWall";
 import UserProfile from "./components/UserProfile";
+import MainUserProfile from "./components/MainUserProfile";
 
 // Context
 import StateContext from "./StateContext";
@@ -24,10 +25,9 @@ function Main() {
     mainUserId: "uid_MainProfile",
     mainUserAvatar: "",
     mainUserName: "",
+    mainUserQuote: "",
     followingUsers: [],
     currentViewUserId: "",
-    currentViewUserAvatar: "",
-    currentViewUserName: "",
     stateChange: false
   });
 
@@ -42,6 +42,7 @@ function Main() {
 
     let tempAvatar = "";
     let tempUsername = "";
+    let tempQuote = "";
     const tempFollows = [];
     await db
       .collection("users")
@@ -50,6 +51,7 @@ function Main() {
       .then(user => {
         tempAvatar = user.data().avatar;
         tempUsername = user.data().username;
+        tempQuote = user.data().quote;
         user.data().following.forEach(follow => {
           tempFollows.push(follow);
         });
@@ -59,6 +61,7 @@ function Main() {
       followingUsers: tempFollows,
       mainUserName: tempUsername,
       mainUserAvatar: tempAvatar,
+      mainUserQuote: tempQuote,
       currentViewUserId: `${user ? user : ""}`
     });
   };
@@ -139,6 +142,7 @@ function Main() {
               <Wall />
             </Route>
             <Route path="/my-wall">
+              <MainUserProfile />
               <NewMessageTextarea />
               <PersonalWall />
             </Route>
