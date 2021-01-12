@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import db from "../firebase.js";
+import { useParams } from "react-router-dom";
 import StateContext from "../StateContext";
 
 export default function UserProfile() {
+  const { id } = useParams();
   const { globalValues, handleUnfollow } = useContext(StateContext);
   const [avatar, setAvatar] = useState("");
   const [username, setUsername] = useState("");
@@ -30,7 +32,7 @@ export default function UserProfile() {
           }
         });
     }
-  }, [globalValues]);
+  }, [globalValues, id]);
 
   return (
     <section id="user-profile">

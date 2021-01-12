@@ -1,9 +1,11 @@
 import React, { useState, useEffect, useContext } from "react";
 import db from "../firebase.js";
+import { useParams } from "react-router-dom";
 import Post from "./Post";
 import StateContext from "../StateContext";
 
 export default function UserWall() {
+  const { id } = useParams();
   const { globalValues } = useContext(StateContext);
   const [posts, setPosts] = useState([]);
 
@@ -18,7 +20,7 @@ export default function UserWall() {
       .orderBy("timestamp", "desc")
       .get()
       .then(posts => setPosts(posts.docs.map(post => post.data())));
-  }, [globalValues]);
+  }, [globalValues, id]);
 
   return (
     <section id="wall">
