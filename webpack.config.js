@@ -25,6 +25,8 @@ class RunAfterCompile {
       fse.copySync("./app/img/tiffani_thiessen.jpg", "./dist/img/tiffani_thiessen.jpg");
       fse.copySync("./app/img/tom_cruise.jpeg", "./dist/img/tom_cruise.jpeg");
       fse.copySync("./app/img/main_profile.jpg", "./dist/img/main_profile.jpg");
+      fse.copySync("./app/_redirects", "./dist/_redirects");
+      fse.copySync("./app/netlify.toml", "./dist/netlify.toml");
     });
   }
 }
