@@ -24,6 +24,7 @@ class RunAfterCompile {
       fse.copySync("./app/img/paul_rudd.jpg", "./dist/img/paul_rudd.jpg");
       fse.copySync("./app/img/tiffani_thiessen.jpg", "./dist/img/tiffani_thiessen.jpg");
       fse.copySync("./app/img/tom_cruise.jpeg", "./dist/img/tom_cruise.jpeg");
+      fse.copySync("./app/img/main_profile.jpg", "./dist/img/main_profile.jpg");
     });
   }
 }
